@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("Best School")
+number = 98
+print(f"{number} Battery steet")
