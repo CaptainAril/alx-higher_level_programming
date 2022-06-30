@@ -21,7 +21,7 @@ if __name__ == "__main__":
         print("{:d} {} {:d} = {:d}".format(a, operator, b, add(a, b)))
     elif operator == '-':
         print("{:d} {} {:d} = {:d}".format(a, operator, b, sub(a, b)))
-    if operator == '_':
+    elif operator == '*':
         print("{:d} {} {:d} = {:d}".format(a, operator, b, mul(a, b)))
-    if operator == '/':
+    elif operator == '/':
         print("{:d} {} {:d} = {:d}".format(a, operator, b, div(a, b)))
