@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a class Square."""
 
+
 class Square:
     """A class Square with size attribute."""
 
@@ -11,4 +12,3 @@ class Square:
             size (int): Size of the square.
         """
         self.__size = size
-
