@@ -38,9 +38,9 @@ class Rectangle:
             ValueError: if width passed is less than 0.
         """
         if not isinstance(value, int):
-            raise TypeError ("width must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError ("width must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
@@ -60,9 +60,9 @@ class Rectangle:
             ValueError: if height passed is less than 0.
         """
         if not isinstance(value, int):
-            raise TypeError ("height must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError ("heigth must be >= 0")
+            raise ValueError("heigth must be >= 0")
         self.__height = value
 
     def area(self):
@@ -90,7 +90,8 @@ class Rectangle:
 
     def __repr__(self):
         """Returns the internal representation of Rectangle."""
-        return "Rectangle(" + str(self.__width) + "," + str(self.__height) + ")"
+        return "Rectangle(" + str(self.__width) + ","\
+            + str(self.__height) + ")"
 
     def __del__(self):
         """Returns a string when a Rectangle instance is deleted."""
@@ -100,11 +101,10 @@ class Rectangle:
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
-            raise TypeError ("rect_1 must be an instance of Rectangle")
+            raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
-            raise TypeError ("rect_2 must be an instance of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area  rect_2.area:
             return rect_1
         else:
             return rect_2
-    

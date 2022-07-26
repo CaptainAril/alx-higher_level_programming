@@ -83,4 +83,5 @@ class Rectangle:
 
     def __repr__(self):
         """Returns the internal representation of Rectangle."""
-        return "Rectangle(" + str(self.__width) + "," + str(self.__height) + ")"
+        return "Rectangle(" + str(self.__width) + ","\
+            + str(self.__height) + ")"
