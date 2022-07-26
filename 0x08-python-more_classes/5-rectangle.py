@@ -88,5 +88,3 @@ class Rectangle:
     def __del__(self):
         """Returns a string when a Rectangle instance is deleted."""
         print("Bye rectangle...")
-
-    
