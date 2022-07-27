@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Defines a locked class"""
+
+
 class LockedClass:
     """An empty Class LockedClass,
     that prevents the dynamic creation of new instance attributes,
