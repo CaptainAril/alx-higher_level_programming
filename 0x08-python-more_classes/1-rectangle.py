@@ -8,8 +8,8 @@ class Rectangle:
         """Defines the attributes for class Rectangle instance(s).
 
         Args:
-            width (int, optional): width of Rectangle. Defaults to 0.
-            height (int, optional): height of rectangle. Defaults to 0.
+            width (int): width of Rectangle. Defaults to 0.
+            height (int): height of rectangle. Defaults to 0.
         """
         self.width = width
         self.height = height
