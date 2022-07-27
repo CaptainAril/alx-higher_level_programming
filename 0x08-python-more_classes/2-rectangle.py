@@ -49,13 +49,13 @@ class Rectangle:
             value (int): value passed for height of Rectangle
 
         Raises:
-            TypeError: if heigth passed is not an int type
+            TypeError: if height passed is not an int type
             ValueError: if height passed is less than 0.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("heigth must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
@@ -67,5 +67,6 @@ class Rectangle:
         """Returns the perimeter of rectangle."""
         if self.__height == 0 or self.__width == 0:
             perimeter = 0
-        perimeter = 2 * (self.__height + self.__width)
+        else:
+            perimeter = 2 * (self.__height + self.__width)
         return perimeter
