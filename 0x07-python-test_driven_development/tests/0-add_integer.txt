@@ -74,3 +74,27 @@ This module defines an integer addition function ``add_integer(a, b=98)``.
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
+
+:: Test case for float over (float('inf'))
+
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(5, float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+:: Test case for float NaN
+
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+        ...
+    TypeError: cannot convert float NaN to integer
+
+    >>> add_integer(64, float('nan'))
+    Traceback (most recent call last):
+        ...
+    TypeError: cannot convert float NaN to integer
