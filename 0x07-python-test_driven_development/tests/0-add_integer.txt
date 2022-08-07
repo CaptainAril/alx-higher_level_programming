@@ -92,9 +92,9 @@ This module defines an integer addition function ``add_integer(a, b=98)``.
     >>> add_integer(float('nan'))
     Traceback (most recent call last):
         ...
-    TypeError: cannot convert float NaN to integer
+    ValueError: cannot convert float NaN to integer
 
     >>> add_integer(64, float('nan'))
     Traceback (most recent call last):
         ...
-    TypeError: cannot convert float NaN to integer
+    ValueError: cannot convert float NaN to integer
