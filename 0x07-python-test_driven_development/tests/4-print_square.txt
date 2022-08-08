@@ -20,7 +20,7 @@ that prints a square with the character '#'.
     ######
     ######
     >>> print_square(0)
-    
+
 
 :: Test case for `size` less than 0 or not an integer.
     >>> print_square(-3)
@@ -57,3 +57,9 @@ that prints a square with the character '#'.
     Traceback (most recent call last):
         ...
     TypeError: size must be an integer
+
+:: no size input
+    >>> print_square()
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
