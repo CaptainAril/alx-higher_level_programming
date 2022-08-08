@@ -28,7 +28,7 @@ that prints "My name is  <first_name> <last_name>".
     TypeError: first_name must be a string
 
 :: Test case for no input or first name
-    >>> say_my_name() #doctest: +SKIP
+    >>> say_my_name()
     Traceback (most recent call last):
         ...
     TypeError: first_name must be a string
@@ -37,3 +37,4 @@ that prints "My name is  <first_name> <last_name>".
     Traceback (most recent call last):
         ...
     TypeError: first_name must be a string
+
