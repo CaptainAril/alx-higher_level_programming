@@ -95,6 +95,25 @@ that divides all elements of a matrix.
         ...
     TypeError: div must be a number
 
+    >>> matrix = [
+    ...     [3, 4.3, 6.4],
+    ...     [-4, -3.6, 3.5]
+    ...     ]
+    >>> matrix_divided(matrix, 'nan')
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+    >>> matrix = [
+    ...     [3, 4.3, 6.4],
+    ...     [-4, -3.6, 3.5]
+    ...     ]
+    >>> matrix_divided(matrix, float('inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+
 
 :: ``div`` can't be equal to 0
     >>> matrix = [
