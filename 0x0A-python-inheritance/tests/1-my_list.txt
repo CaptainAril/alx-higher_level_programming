@@ -1,0 +1,35 @@
+for ==================
+Using 1-my_list.py
+==================
+This module defines a class ``MyList`` and class method ``print_sorted``
+that prints out a sorted list.
+
+:: Importing the class from the module
+    >>> MyList = __import__('1-my_list').MyList
+
+::
+    >>> List_1 = MyList()
+    >>> for i in [1, 4, 6, 3]:
+    ...     List_1.append(i)
+    >>> List_1.print_sorted()
+    [1, 3, 4, 6]
+
+    >>> List_2 = MyList()
+    >>> for i in [6, 0.32, -3.3, 2]:
+    ...     List_2.append(i)
+    >>> List_2.print_sorted()
+    [-3.3, 0.32, 2, 6]
+
+::
+    >>> List_3 = MyList()
+    >>> for i in [1, 4, "string", 6, 3]:
+    ...     List_3.append(i)
+    >>> List_3.print_sorted()
+    Traceback (most recent call last):
+        ...
+    TypeError: '<' not supported between instances of 'str' and 'int'
+
+::
+    >>> List_1 = MyList()
+    >>> List_1.print_sorted()
+    []
