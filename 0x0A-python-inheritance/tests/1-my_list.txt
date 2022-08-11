@@ -38,3 +38,11 @@ that prints out a sorted list.
     >>> issubclass(MyList, list)
     True
 
+::
+    >>> List_5 = []
+    >>> for i in [1, 4, 6, 3]:
+    ...     List_5.append(i)
+    >>> List_5.print_sorted()
+    Traceback (most recent call last):
+        ...
+    AttributeError: 'list' object has no attribute 'print_sorted'
