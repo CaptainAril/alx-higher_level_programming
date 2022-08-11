@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+z = 'Holberton'
+def x():
+    global y = 'ALX'
+    print(y + z)
+
+x()
+print(dir())

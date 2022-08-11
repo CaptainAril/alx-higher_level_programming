@@ -30,6 +30,11 @@ that prints out a sorted list.
     TypeError: '<' not supported between instances of 'str' and 'int'
 
 ::
-    >>> List_1 = MyList()
-    >>> List_1.print_sorted()
+    >>> List_4 = MyList()
+    >>> List_4.print_sorted()
     []
+
+::
+    >>> issubclass(MyList, list)
+    True
+
