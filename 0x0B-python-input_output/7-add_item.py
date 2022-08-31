@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """adds all arguments to a Python list, and saves them in a JSON file."""
-import sys import argv
+from sys import argv
 from os.path import exists as file_exists
 
 
