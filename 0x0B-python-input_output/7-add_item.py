@@ -15,6 +15,5 @@ if file_exists(filename) is False:
         save_to_json_file([], filename)
 
 json_obj = load_from_json_file(filename)
-for i in argv[1:]:
-    json_obj.append(i)
+json_obj.extend(argv[1:])
 save_to_json_file(json_obj, filename)
