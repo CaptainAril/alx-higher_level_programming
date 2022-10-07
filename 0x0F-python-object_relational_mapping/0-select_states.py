@@ -2,10 +2,11 @@
 """Python script that lists all `states` from the database `hbtn_0e_0_usa`."""
 
 
-def main():
-    import sys
-    import MySQLdb
+import sys
+import MySQLdb
 
+
+if __name__ == "__main__":
     username, password, database_name = sys.argv[1:]
 
     db = MySQLdb.connect(
@@ -21,7 +22,3 @@ def main():
 
     cursor.close()
     db.close()
-
-
-if __name__ == "__main__":
-    main()
