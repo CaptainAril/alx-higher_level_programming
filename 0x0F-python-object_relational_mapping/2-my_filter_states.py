@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module takes in argument and displays all values in `states` 
+table of `hbtn_0e_0_usa` where `name` matches the argument.
+"""
 
 
 import sys
