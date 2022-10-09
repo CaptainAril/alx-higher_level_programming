@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module takes in argument and displays all values in `states`
-table of `hbtn_0e_0_usa` where `name` matches the argument.
+table of `hbtn_0e_0_usa` where `name` matches the argument. This script is
+safe from SQL injection.
 """
 
 
@@ -16,9 +17,8 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    query = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC"\
-        .format(state_name)
-    cursor.execute(query)
+    query = "SELECT * FROM states WHERE name=%s ORDER BY id ASC"
+    cursor.execute(query, (state_name,))
     states = cursor.fetchall()
     for state in states:
         print(state)
