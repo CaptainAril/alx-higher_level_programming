@@ -23,4 +23,6 @@ if __name__ == "__main__":
     for city in row:
         cities.append(city[0])
     print(', '.join(cities))
- 
+
+    cursor.close()
+    db.close()
