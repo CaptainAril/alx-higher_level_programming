@@ -10,15 +10,16 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
 
-engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
-                       .format(argv[1], argv[2], argv[3]))
-new_state = State(name='Louisiana')
+if __name__ == '__main__':
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
+                        .format(argv[1], argv[2], argv[3]))
+    new_state = State(name='Louisiana')
 
-session_maker = sessionmaker(bind=engine)
-session = session_maker()
-session.add(new_state)
+    session_maker = sessionmaker(bind=engine)
+    session = session_maker()
+    session.add(new_state)
 
-state = session.query(State).filter(State.name == new_state.name)
-for state in state:
-    print(state.id)
-session.commit()
+    state = session.query(State).filter(State.name == new_state.name)
+    for state in state:
+        print(state.id)
+    session.commit()
