@@ -21,3 +21,4 @@ session.add(new_state)
 state = session.query(State).filter(State.name == new_state.name)
 for state in state:
     print(state.id)
+session.commit()
