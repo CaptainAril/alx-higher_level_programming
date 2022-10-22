@@ -11,5 +11,5 @@ if __name__ == '__main__':
     val = en_value.encode("UTF-8")
     request = urllib.request.Request(argv[1], data=val, method='POST')
     with urllib.request.urlopen(request) as r:
-        body = r.open()
+        body = r.read()
     print(body.decode("UTF-8"))
