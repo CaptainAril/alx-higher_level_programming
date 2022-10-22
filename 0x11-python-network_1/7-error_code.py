@@ -7,9 +7,8 @@ if __name__ == '__main__':
     from sys import argv
     import requests
 
-    try:
-        r = requests.get(argv[1])
-        # print(r.text)
-    except requests.exceptions.ConnectionError as e:
-        print(e)
-        # print(r.status_code)
+    r = requests.get(argv[1])
+    if r.status_code >= 400:
+        print("Error code: {}".format(r.status_code))
+    else:
+        print(r.text)
