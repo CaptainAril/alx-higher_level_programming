@@ -1,18 +1,23 @@
 #!/usr/bin/python3
-""" Interview task """
+"""This script lists 10 commits from a github repository
+ - takes in two arguments (repository name and owner name)
+"""
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    import requests
     from sys import argv
-    from requests import get
 
-    url = f'https://api.github.com/repos/{argv[2]}/{argv[1]}/commits'
-
-    res = get(url)
-    commits = res.json()
+    url = 'https://api.github.com/repos/{}/{}/commits'\
+        .format(argv[1], argv[2])
+    r = requests.get(url)
+    print(r.headers)
+    commits = r.json()
+    print(commits)
     try:
         for i in range(10):
-            print('{}: {}'.format(
-                commits[i].get('sha'),
-                commits[i].get('commit').get('author').get('name')))
+            commit = commits[i]
+            sha = commit.get('sha')
+            author_name = commit.get("commit").get('author').get('name')
+            print("[{}] {}".format(sha, author_name))
     except IndexError:
         pass
