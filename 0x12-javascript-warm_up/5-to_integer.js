@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const { argv } = require('node:process');
+import { argv } from 'node:process';
 
 const value = argv[2];
 if (isNaN(value)) {
