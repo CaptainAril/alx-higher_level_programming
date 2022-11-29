@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const value = process.argv[2]
+const value = process.argv[2];
 
 if (isNaN(value)) {
   console.log('Not a number');
