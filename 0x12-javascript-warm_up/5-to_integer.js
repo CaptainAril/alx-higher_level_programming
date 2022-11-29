@@ -1,8 +1,7 @@
 #!/usr/bin/node
 
-import { argv } from 'node:process';
+const value = process.argv[2]
 
-const value = argv[2];
 if (isNaN(value)) {
   console.log('Not a number');
 } else {
