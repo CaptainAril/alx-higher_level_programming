@@ -15,19 +15,6 @@ module.exports = class Rectangle {
           console.log(char);
         }
       };
-
-      // exchanges the width and height of the rectangle
-      this.rotate = function () {
-        const tmp = this.height;
-        this.height = this.width;
-        this.width = tmp;
-      };
-
-      // multiplies the width and height by 2
-      this.double = function () {
-        this.height *= 2;
-        this.width *= 2;
-      };
     } else {
       constructor();
     }
