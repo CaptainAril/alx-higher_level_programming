@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Adds a new State object `Louisiana to the database
+and prints it's id."""
 
 from sys import argv
 from model_state import Base, State
