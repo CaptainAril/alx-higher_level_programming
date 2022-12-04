@@ -7,6 +7,7 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
+
 class State(Base):
     """Defines a class State that inherits from Base."""
     __tablename__ = 'states'
