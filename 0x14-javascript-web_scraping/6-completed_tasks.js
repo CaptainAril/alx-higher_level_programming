@@ -12,7 +12,9 @@ request.get(url, (error, response, body) => {
     for (const user of users) {
       if (id < user.userId) {
         id = user.userId;
-        count = 0;
+        if (obj[id]) {
+          count = obj[id];
+        } else count = 0;
       }
       if (user.userId === id && user.completed === true) {
         count++;
