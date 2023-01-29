@@ -1,0 +1,9 @@
+.bold {
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.blue {
+    color: blue;
+}
