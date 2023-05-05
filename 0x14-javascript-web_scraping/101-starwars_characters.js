@@ -1,38 +1,24 @@
 #!/usr/bin/node
+// This scripts prints all characters of a Star Wars Movie Using the `star wars api`
 
 const request = require('request');
-const id = process.argv[2];
-const url = 'https://swapi-api.alx-tools.com/api/films/';
-const movie_url = `https://swapi-api.alx-tools.com/api/films/${id}`;
-let episode_title = null;
-let count = 0;
-request.get(movie_url, (error, response, body) => {
-  if (error) throw error;
-  else {
-    const episode = JSON.parse(body);
-    episode_title = episode.title;
-  }
-  request.get(url, (error, response, body) => {
-    if (error) console.log(error);
-    else {
-      const result = JSON.parse(body);
-      console.log(`Title: ${episode_title}`);
-      for (const film of result.results) {
-        if (film.title == episode_title) {
-          console.log(film.characters);
-          for (const character of film.characters) {
-            console.log(character);
-            count++;
-            request(character, (error, response, body) => {
-              if (error) console.log(error);
-              else {
-                console.log(JSON.parse(body));
-              }
-            });
-            console.log(count);
-          }
-        }
-      }
-    }
-  });
+const MovieID = process.argv[2];
+
+const url = `https://swapi-api.alx-tools.com/api/films/${MovieID}`;
+request.get(url, function (err, response, body) {
+  if (err) { console.log(err); } else { body = JSON.parse(body); }
+  const characters = body.characters;
+  getCharacters(characters, 0, characters.length);
 });
+
+function getCharacters (characters, idx, max) {
+  if (!characters || idx === max) { return; }
+
+  request.get(characters[idx], function (err, response, body) {
+    if (err) { console.log(err); } else { body = JSON.parse(body); }
+    console.log(body.name);
+    idx++;
+    getCharacters(characters, idx, max);
+  });
+}
+
