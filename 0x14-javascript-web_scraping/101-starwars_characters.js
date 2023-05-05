@@ -21,4 +21,3 @@ function getCharacters (characters, idx, max) {
     getCharacters(characters, idx, max);
   });
 }
-
